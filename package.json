@@ -1,12 +1,12 @@
 {
-  "name": "react-placeholder-image",
+  "name": "react-simple-placeholder-image",
   "version": "0.0.1",
   "description": "A Minimal lightweight react component for adding a nice image placeholder.",
   "author": "awran5 <awran5@yahoo.com>",
   "license": "MIT",
-  "repository": "https://github.com/awran5/react-placeholder-image",
-  "bugs": "https://github.com/awran5/react-placeholder-image/issues",
-  "homepage": "https://react-placeholder-image.vercel.app/",
+  "repository": "https://github.com/awran5/react-simple-placeholder-image",
+  "bugs": "https://github.com/awran5/react-simple-placeholder-image/issues",
+  "homepage": "https://github.com/awran5/react-simple-placeholder-image#readme",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "source": "src/index.tsx",
@@ -22,7 +22,6 @@
     "build": "rollup -c --exports auto",
     "predeploy": "cd example && yarn && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "commit": "git cz",
     "release": "standard-version"
   },
   "peerDependencies": {

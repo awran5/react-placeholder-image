@@ -1,8 +1,8 @@
-# React Placeholder Image
+# React Simple Placeholder Image
 
 > A Minimal lightweight react component for adding a nice image placeholder.
 
-[![NPM](https://img.shields.io/npm/v/react-placeholder-image.svg)](https://www.npmjs.com/package/react-placeholder-image) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)![npm bundle size](https://img.shields.io/bundlephobia/min/react-placeholder-image)![GitHub](https://img.shields.io/github/license/awran5/react-placeholder-image)
+[![NPM](https://img.shields.io/npm/v/react-simple-placeholder-image.svg)](https://www.npmjs.com/package/react-simple-placeholder-image) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)![npm bundle size](https://img.shields.io/bundlephobia/min/react-simple-placeholder-image)![GitHub](https://img.shields.io/github/license/awran5/react-simple-placeholder-image)
 
 <p align="center">
   <img src="./assets/hello-world.svg" alt="screenshot" width="50%" />
@@ -13,20 +13,20 @@
 #### npm
 
 ```sh
-npm i react-placeholder-image
+npm i react-simple-placeholder-image
 ```
 
 #### Yarn
 
 ```sh
-yarn add react-placeholder-image
+yarn add react-simple-placeholder-image
 ```
 
 ## Usage
 
 ```jsx
 import React from 'react'
-import { DummyImage } from 'react-placeholder-image'
+import { DummyImage } from 'react-simple-placeholder-image'
 
 const MyComponent = () => {
   return (
@@ -43,7 +43,7 @@ const MyComponent = () => {
 
 ```jsx
 import React from 'react'
-import { DummyImage } from 'react-placeholder-image'
+import { DummyImage } from 'react-simple-placeholder-image'
 
 const MyComponent = () => {
   return (
@@ -87,7 +87,7 @@ const MyComponent = () => {
 
 <br />
 
-[![Edit react-placeholder-image](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-placeholder-image-wu12s?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit react-simple-placeholder-image](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-simple-placeholder-image-wu12s?fontsize=14&hidenavigation=1&theme=dark)
 
 ### License
 

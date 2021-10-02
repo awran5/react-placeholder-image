@@ -1,7 +1,8 @@
 src
 example
+.editorconfig
 .eslintignore
-.eslintrc
+.eslintrc.js
 .prettierrc
 tsconfig.json
 rollup.*

@@ -20,6 +20,6 @@ export default {
   output: {
     file: packageJson.main,
     format: 'cjs',
-    sourcemap: true
+    sourcemap: false
   }
 }

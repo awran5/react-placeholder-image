@@ -1,5 +1,10 @@
 import React, { useMemo } from 'react'
 
+type SVGElement = SVGSVGElement | SVGTextElement | SVGPathElement
+
+const setAttributes = (element: SVGElement, props: Object) =>
+  Object.entries(props).forEach((args) => element.setAttribute(...args))
+
 export type DummyImageProps = {
   shape?: 'avatar' | 'image' | 'text'
   width?: number
@@ -28,11 +33,14 @@ export const DummyImage = ({
   const imageDataURI = useMemo(() => {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
     svg.style.backgroundColor = bgColor
-    svg.setAttribute('viewBox', '0 0 24 24')
-    svg.setAttribute('width', `${width}`)
-    svg.setAttribute('height', `${height}`)
 
-    const child: SVGTextElement | SVGPathElement =
+    setAttributes(svg, {
+      viewBox: '0 0 24 24',
+      width,
+      height
+    })
+
+    const child: SVGElement =
       shape === 'text'
         ? document.createElementNS('http://www.w3.org/2000/svg', 'text')
         : document.createElementNS('http://www.w3.org/2000/svg', 'path')
@@ -41,12 +49,14 @@ export const DummyImage = ({
 
     switch (shape) {
       case 'text':
-        child.setAttribute('font-size', '15%')
-        child.setAttribute('font-family', `${fontFamily}`)
-        child.setAttribute('x', `50%`)
-        child.setAttribute('y', `50%`)
-        child.setAttribute('dominant-baseline', `middle`)
-        child.setAttribute('text-anchor', `middle`)
+        setAttributes(child, {
+          'font-size': '15%',
+          'font-family': fontFamily,
+          x: '50%',
+          y: '50%',
+          'dominant-baseline': 'middle',
+          'text-anchor': 'middle'
+        })
         child.appendChild(document.createTextNode(placeholder))
         break
 

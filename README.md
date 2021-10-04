@@ -22,24 +22,9 @@ npm i react-simple-placeholder-image
 yarn add react-simple-placeholder-image
 ```
 
-## Usage
-
-```jsx
-import React from 'react'
-import { DummyImage } from 'react-simple-placeholder-image'
-
-const MyComponent = () => {
-  return (
-    <div className='App'>
-      <DummyImage {/* Props */} />
-    </div>
-  )
-}
-```
-
 ---
 
-### Example
+### Examples
 
 ```jsx
 import React from 'react'
@@ -58,6 +43,8 @@ const MyComponent = () => {
 }
 ```
 
+<br />
+
 <p align="center">
   <img src="./assets/500x500.svg" alt="screenshot" width="250" />
   <img src="./assets/hello-world.svg" alt="screenshot" width="250"/>
@@ -66,11 +53,26 @@ const MyComponent = () => {
   <img src="./assets/colored.svg" alt="screenshot" width="250" />
 </p>
 
----
+<br />
+
+## Component
+
+```jsx
+import React from 'react'
+import { DummyImage } from 'react-simple-placeholder-image'
+
+const MyComponent = () => {
+  return (
+    <div className='App'>
+      <DummyImage {/* Props */} />
+    </div>
+  )
+}
+```
 
 <br />
 
-## Available Props
+## Component Props
 
 | Prop          |           Type            | Options  | Description            |              Default               |
 | ------------- | :-----------------------: | -------- | ---------------------- | :--------------------------------: |
@@ -84,6 +86,41 @@ const MyComponent = () => {
 | `style`       |    React.CSSProperties    | Optional | CSS style prop         | `maxWidth: '100%', height: 'auto'` |
 | `className`   |          String           | Optional | className prop         |            `dummy-img`             |
 | `alt`         |          String           | Optional | Alt prop               |            `dummy-img`             |
+
+---
+
+## Hook
+
+```jsx
+import React from 'react'
+import { useDummyImage } from 'react-simple-placeholder-image'
+
+const MyComponent = () => {
+  const image = useDummyImage({
+    /* Config */
+  })
+
+  return (
+    <div className='App'>
+      ...
+      <img src={image} alt='dummy-img' />
+      ...
+    </div>
+  )
+}
+```
+
+## Hook Config
+
+| Prop          |           Type            | Options  | Description            |     Default      |
+| ------------- | :-----------------------: | -------- | ---------------------- | :--------------: |
+| `shape`       | `avatar \| image \| text` | Optional | Image shape style      |      `text`      |
+| `width`       |          Number           | Optional | Image width            |      `300`       |
+| `height`      |          Number           | Optional | Image height           |      `300`       |
+| `bgColor`     |          String           | Optional | Image background color |    `#e5e5e5`     |
+| `fgColor`     |          String           | Optional | Image foreground color |    `#f9f9f9`     |
+| `placeholder` |          String           | Optional | Text placeholder       | `width x height` |
+| `fontFamily`  |          String           | Optional | Text font family       |   `sans-serif`   |
 
 <br />
 

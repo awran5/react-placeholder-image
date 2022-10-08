@@ -12,6 +12,7 @@ export default {
     resolve(),
     commonjs(),
     typescript({
+      exclude: ['src/stories/**'],
       rollupCommonJSResolveHack: false,
       clean: true
     }),

@@ -6,12 +6,19 @@ const setAttributes = (element: SVGElement, props: Object) =>
   Object.entries(props).forEach((args) => element.setAttribute(...args))
 
 export type DummyImageHook = {
+  /** Image shape style */
   shape?: 'avatar' | 'image' | 'text'
+  /** Image width */
   width?: number
+  /** Image height */
   height?: number
+  /** Image background color */
   bgColor?: string
+  /** Image foreground color */
   fgColor?: string
+  /** Text placeholder */
   placeholder?: string
+  /** Text font family */
   fontFamily?: string
 }
 

@@ -1,11 +1,14 @@
 import React from 'react'
-import { DummyImageHook, useDummyImage } from '../Hooks/useDummyImage'
+import { DummyImageHook, useDummyImage } from '../hooks/useDummyImage'
 
-export interface DummyImageProps extends DummyImageHook {
+export type DummyImageProps = {
+  /** CSS style prop */
   style?: React.CSSProperties
+  /** Custom className */
   className?: string
+  /** Inage alt prop */
   alt?: string
-}
+} & DummyImageHook
 
 export const DummyImage = ({
   shape = 'text',
@@ -37,6 +40,7 @@ export const DummyImage = ({
       width={width}
       height={height}
       className={className}
+      loading='lazy'
     />
   )
 }
